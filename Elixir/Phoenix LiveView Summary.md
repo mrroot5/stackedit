@@ -1,7 +1,14 @@
 # Phoenix LiveView
 A summary for Phoenix LiveView.
 
-## Flow
+## Phoenix Flow CRC
+Phoenix follows 
+connection_from_request
+|> endpoint
+|> router
+|> custom_application
+
+## LiveView Flow
 
 Router => liveview.mount/3 => liveview.render/2
 
@@ -11,5 +18,6 @@ Plugs == reducers, they take a Plug.Conn as he first param and returns a Plug.Co
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NjE2MjgxNTcsLTQ3ODAxOTU4Ml19
+eyJoaXN0b3J5IjpbMTUwMDI5NDEyMywtMTY2MTYyODE1NywtND
+c4MDE5NTgyXX0=
 -->
