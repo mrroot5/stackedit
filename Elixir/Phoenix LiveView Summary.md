@@ -1,5 +1,6 @@
 # Phoenix LiveView
-A summary for Phoenix LiveView.
+
+A summary for Phoenix and Phoenix LiveView.
 
 ## Phoenix
 
@@ -27,6 +28,6 @@ Router => liveview.mount/3 => liveview.render/2
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyNzUxNTU2MiwtMTY2MTYyODE1NywtND
-c4MDE5NTgyXX0=
+eyJoaXN0b3J5IjpbMTUxODg0MzE4LC0xNjYxNjI4MTU3LC00Nz
+gwMTk1ODJdfQ==
 -->
