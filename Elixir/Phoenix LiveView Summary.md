@@ -40,23 +40,28 @@ We’ll construct the generator command such that it will generate a Catalog con
 ```bash
 mix phx.gen.live Catalog Product products name:string description:string unit_price:float sku:integer:unique
 ```
+#### Core
 
-#### Migration
+##### Migration
 
 The migration file defines a database table, products , along with a set of fields for that table.
 **IMPORTANT** Always take a look at generated file because some times it doesn't do what we need.
 
-#### Schema
+##### Schema
 
 Think of schemas as maps between two kinds of data.
 On the database side is the `products` table we generated with our migration.
 On the Elixir side, the `Product` schema knows how to translate between
 the `products` database table and the `Pento.Catalog.Product` Elixir struct.
 
+#### Context
+
+
+
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1MDQ0MzE2MCw3ODA0Mzc1MzQsLTk4OD
-U4MTQ4NCwtMTg4MTg3NzAxOCwtMTQ0NTI1MDE3NiwtMzg4NTU4
-NjI2LDE1MTg4NDMxOCwtMTY2MTYyODE1NywtNDc4MDE5NTgyXX
-0=
+eyJoaXN0b3J5IjpbLTE5NDgxNjQ5MzgsMTk1MDQ0MzE2MCw3OD
+A0Mzc1MzQsLTk4ODU4MTQ4NCwtMTg4MTg3NzAxOCwtMTQ0NTI1
+MDE3NiwtMzg4NTU4NjI2LDE1MTg4NDMxOCwtMTY2MTYyODE1Ny
+wtNDc4MDE5NTgyXX0=
 -->
