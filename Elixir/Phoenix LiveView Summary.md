@@ -22,6 +22,11 @@ connection_from_request
 
 Plugs == reducers, they take a Plug.Conn as he first param and returns a Plug.Conn.
 
+### Context
+
+A Phoenix Context is a module in your Phoenix application that provides an API for a service or resource.
+It is responsible for managing uncertainty, external interfaces, and process machinery.
+
 ## LiveView
 
 ### LiveView Flow
@@ -34,7 +39,7 @@ Router => liveview.mount/3 => liveview.render/2
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODE4NzcwMTgsLTE0NDUyNTAxNzYsLT
-M4ODU1ODYyNiwxNTE4ODQzMTgsLTE2NjE2MjgxNTcsLTQ3ODAx
-OTU4Ml19
+eyJoaXN0b3J5IjpbLTk4ODU4MTQ4NCwtMTg4MTg3NzAxOCwtMT
+Q0NTI1MDE3NiwtMzg4NTU4NjI2LDE1MTg4NDMxOCwtMTY2MTYy
+ODE1NywtNDc4MDE5NTgyXX0=
 -->
