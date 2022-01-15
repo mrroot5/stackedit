@@ -33,13 +33,16 @@ It is responsible for managing uncertainty, external interfaces, and process mac
 
 Router => liveview.mount/3 => liveview.render/2
 
-### Generate a liveview
+### Generate a LiveView
 
-`mix phx.gen.live`
+We’ll construct the generator command such that it will generate a Catalog context with a schema for Product , corresponding to a products database table.
+A product will have name , description , unit_price , and SKU fields, like this
+
+`mix phx.gen.live Catalog Product products name:string description:string unit_price:float sku:integer:unique`
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4ODU4MTQ4NCwtMTg4MTg3NzAxOCwtMT
-Q0NTI1MDE3NiwtMzg4NTU4NjI2LDE1MTg4NDMxOCwtMTY2MTYy
-ODE1NywtNDc4MDE5NTgyXX0=
+eyJoaXN0b3J5IjpbLTYxMTY4MjA4NCwtOTg4NTgxNDg0LC0xOD
+gxODc3MDE4LC0xNDQ1MjUwMTc2LC0zODg1NTg2MjYsMTUxODg0
+MzE4LC0xNjYxNjI4MTU3LC00NzgwMTk1ODJdfQ==
 -->
