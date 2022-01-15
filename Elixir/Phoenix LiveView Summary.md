@@ -41,9 +41,17 @@ We’ll construct the generator command such that it will generate a Catalog con
 mix phx.gen.live Catalog Product products name:string description:string unit_price:float sku:integer:unique
 ```
 
+#### Schema
+
+Think of schemas as maps between two kinds of data.
+On the database side is the `products` table we generated with our migration.
+On the Elixir side, the `Product` schema knows how to translate between
+the `products` database table and the `Pento.Catalog.Product` Elixir struct.
+
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzgwNDM3NTM0LC05ODg1ODE0ODQsLTE4OD
-E4NzcwMTgsLTE0NDUyNTAxNzYsLTM4ODU1ODYyNiwxNTE4ODQz
-MTgsLTE2NjE2MjgxNTcsLTQ3ODAxOTU4Ml19
+eyJoaXN0b3J5IjpbLTEzODU1NDQ4MzEsNzgwNDM3NTM0LC05OD
+g1ODE0ODQsLTE4ODE4NzcwMTgsLTE0NDUyNTAxNzYsLTM4ODU1
+ODYyNiwxNTE4ODQzMTgsLTE2NjE2MjgxNTcsLTQ3ODAxOTU4Ml
+19
 -->
