@@ -28,8 +28,13 @@ Plugs == reducers, they take a Plug.Conn as he first param and returns a Plug.Co
 
 Router => liveview.mount/3 => liveview.render/2
 
+### Generate a liveview
+
+`mix phx.gen.live`
+
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDUyNTAxNzYsLTM4ODU1ODYyNiwxNT
-E4ODQzMTgsLTE2NjE2MjgxNTcsLTQ3ODAxOTU4Ml19
+eyJoaXN0b3J5IjpbLTE4ODE4NzcwMTgsLTE0NDUyNTAxNzYsLT
+M4ODU1ODYyNiwxNTE4ODQzMTgsLTE2NjE2MjgxNTcsLTQ3ODAx
+OTU4Ml19
 -->
