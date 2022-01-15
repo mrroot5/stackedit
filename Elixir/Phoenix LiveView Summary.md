@@ -47,12 +47,19 @@ It is responsible for managing uncertainty, external interfaces, and process mac
 def send_sale_skus(query) do
 query
 |> Product.cheap_product_skus(25.00)
-|> run_query
+|> run_query # if run_query fails what happen with send? this pipe fails
 |> Service.send_bargains
 end
-
 # with
-
+def send_sale_skus(query) do
+	with {:ok, products} <- get_sale_skus(query),
+		 {:ok, response} <- Service.send_bargains(products) do
+	    response
+	else
+	{:error, reason} ->
+		IO.puts "Error sending sale skus: #{reason}"
+	end
+end
 ```
 
 ## LiveView
@@ -71,8 +78,8 @@ mix phx.gen.live Catalog Product products name:string description:string unit_pr
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1NTc4MTI0NywxOTUwNDQzMTYwLDc4MD
-QzNzUzNCwtOTg4NTgxNDg0LC0xODgxODc3MDE4LC0xNDQ1MjUw
-MTc2LC0zODg1NTg2MjYsMTUxODg0MzE4LC0xNjYxNjI4MTU3LC
-00NzgwMTk1ODJdfQ==
+eyJoaXN0b3J5IjpbMjE2NTcwMTAzLDE5NTA0NDMxNjAsNzgwND
+M3NTM0LC05ODg1ODE0ODQsLTE4ODE4NzcwMTgsLTE0NDUyNTAx
+NzYsLTM4ODU1ODYyNiwxNTE4ODQzMTgsLTE2NjE2MjgxNTcsLT
+Q3ODAxOTU4Ml19
 -->
