@@ -35,14 +35,15 @@ Router => liveview.mount/3 => liveview.render/2
 
 ### Generate a LiveView
 
-We’ll construct the generator command such that it will generate a Catalog context with a schema for Product , corresponding to a products database table.
-A product will have name , description , unit_price , and SKU fields, like this
+We’ll construct the generator command such that it will generate a Catalog context with a schema for Product, corresponding to a products database table. A product will have name , description , unit_price , and SKU fields, like this:
 
-`mix phx.gen.live Catalog Product products name:string description:string unit_price:float sku:integer:unique`
+```shell
+mix phx.gen.live Catalog Product products name:string description:string unit_price:float sku:integer:unique
+```
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxMTY4MjA4NCwtOTg4NTgxNDg0LC0xOD
-gxODc3MDE4LC0xNDQ1MjUwMTc2LC0zODg1NTg2MjYsMTUxODg0
-MzE4LC0xNjYxNjI4MTU3LC00NzgwMTk1ODJdfQ==
+eyJoaXN0b3J5IjpbMzAxNjMxMjQwLC05ODg1ODE0ODQsLTE4OD
+E4NzcwMTgsLTE0NDUyNTAxNzYsLTM4ODU1ODYyNiwxNTE4ODQz
+MTgsLTE2NjE2MjgxNTcsLTQ3ODAxOTU4Ml19
 -->
