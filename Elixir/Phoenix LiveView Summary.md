@@ -22,12 +22,38 @@ connection_from_request
 
 Plugs == reducers, they take a Plug.Conn as he first param and returns a Plug.Conn.
 
+#### Migration (core part)
 
+The migration file defines a database table, products , along with a set of fields for that table.
+**IMPORTANT** Always take a look at generated file because some times it doesn't do what we need.
+
+#### Schema (core part)
+
+Think of schemas as maps between two kinds of data.
+On the database side is the `products` table we generated with our migration.
+On the Elixir side, the `Product` schema knows how to translate between
+the `products` database table and the `Pento.Catalog.Product` Elixir struct.
 
 ### Context
 
 A Phoenix Context is a module in your Phoenix application that provides an API for a service or resource.
 It is responsible for managing uncertainty, external interfaces, and process machinery.
+
+**Developer tip**: use **with** instead of **pipes** because is easier to control errors with **with**.
+
+* Sample:
+```elixir
+# pipes
+def send_sale_skus(query) do
+query
+|> Product.cheap_product_skus(25.00)
+|> run_query
+|> Service.send_bargains
+end
+
+# with
+
+```
 
 ## LiveView
 
@@ -43,17 +69,10 @@ We’ll construct the generator command such that it will generate a Catalog con
 mix phx.gen.live Catalog Product products name:string description:string unit_price:float sku:integer:unique
 ```
 
-
-
-
-#### Context (boundary / api part)
-
-
-
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU1Mzk3Mjg0LDE5NTA0NDMxNjAsNzgwND
-M3NTM0LC05ODg1ODE0ODQsLTE4ODE4NzcwMTgsLTE0NDUyNTAx
-NzYsLTM4ODU1ODYyNiwxNTE4ODQzMTgsLTE2NjE2MjgxNTcsLT
-Q3ODAxOTU4Ml19
+eyJoaXN0b3J5IjpbLTc1NTc4MTI0NywxOTUwNDQzMTYwLDc4MD
+QzNzUzNCwtOTg4NTgxNDg0LC0xODgxODc3MDE4LC0xNDQ1MjUw
+MTc2LC0zODg1NTg2MjYsMTUxODg0MzE4LC0xNjYxNjI4MTU3LC
+00NzgwMTk1ODJdfQ==
 -->
