@@ -22,6 +22,8 @@ connection_from_request
 
 Plugs == reducers, they take a Plug.Conn as he first param and returns a Plug.Conn.
 
+
+
 ### Context
 
 A Phoenix Context is a module in your Phoenix application that provides an API for a service or resource.
@@ -40,28 +42,18 @@ We’ll construct the generator command such that it will generate a Catalog con
 ```bash
 mix phx.gen.live Catalog Product products name:string description:string unit_price:float sku:integer:unique
 ```
-#### Core
 
-##### Migration
 
-The migration file defines a database table, products , along with a set of fields for that table.
-**IMPORTANT** Always take a look at generated file because some times it doesn't do what we need.
 
-##### Schema
 
-Think of schemas as maps between two kinds of data.
-On the database side is the `products` table we generated with our migration.
-On the Elixir side, the `Product` schema knows how to translate between
-the `products` database table and the `Pento.Catalog.Product` Elixir struct.
-
-#### Context
+#### Context (boundary / api part)
 
 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NDgxNjQ5MzgsMTk1MDQ0MzE2MCw3OD
-A0Mzc1MzQsLTk4ODU4MTQ4NCwtMTg4MTg3NzAxOCwtMTQ0NTI1
-MDE3NiwtMzg4NTU4NjI2LDE1MTg4NDMxOCwtMTY2MTYyODE1Ny
-wtNDc4MDE5NTgyXX0=
+eyJoaXN0b3J5IjpbOTU1Mzk3Mjg0LDE5NTA0NDMxNjAsNzgwND
+M3NTM0LC05ODg1ODE0ODQsLTE4ODE4NzcwMTgsLTE0NDUyNTAx
+NzYsLTM4ODU1ODYyNiwxNTE4ODQzMTgsLTE2NjE2MjgxNTcsLT
+Q3ODAxOTU4Ml19
 -->
