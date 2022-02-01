@@ -18,6 +18,8 @@ connection_from_request
 * The **router** connect a request to the module that will process it and set policies (how a request should be managed), e.x.: accept only `JSON` for `:api` requests.
 * The **custom_application** can be a Phoenix controller, a Phoenix channels application, or a live view.
 
+![phoenix_schema.png](images/phoenix_schema.png)
+
 ### Plug.Conn
 
 Plugs == reducers, they take a Plug.Conn as he first param and returns a Plug.Conn.
@@ -62,11 +64,28 @@ def send_sale_skus(query) do
 end
 ```
 
+**Generate a context wihout liveview**
+
+```shell
+mix phx.gen.context Catalog Product products name:string description:string unit_price:float sku:integer:unique
+```
+
+* Catalog: schema (core).
+* Product (Context).
+* 
+
 ## LiveView
 
 ### LiveView Flow
 
 Router => liveview.mount/3 => liveview.render/2
+
+The sample code could be generated with [Generate a LiveView](#generate-a-liveview)
+command on this guide.
+
+![sample_ecommerce_products_list_flow.png](images/sample_ecommerce_products_list_flow.png)
+
+![sample_how_is_rendered_ecommerce_products_list_flow.png](images/sample_how_is_rendered_ecommerce_products_list_flow.png)
 
 ### Generate a LiveView
 
@@ -75,6 +94,16 @@ We’ll construct the generator command such that it will generate a Catalog con
 ```bash
 mix phx.gen.live Catalog Product products name:string description:string unit_price:float sku:integer:unique
 ```
+
+### Forms
+
+![sample_create_a_product_flow.png](images/sample_create_a_product_flow.png)
+
+## Components
+
+Components run in the same OTP server as their parent. There’s one shared state,
+and one supervisor. That means error and failure handling all happen at the level of
+the parent live view.
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
